@@ -1,0 +1,49 @@
+# Humans Rule! 
+
+## This website is the result of the hard work of the following professionals:
+
+## Team
+
+Lead Digital Project Management: Name
+
+Technical Project Management Support: Name
+
+Wireframes: Name
+
+Words: Name
+
+Creative Director: Name
+
+Design: Name
+
+UI Director and Accessibility Wiz Kid: Name
+
+Lead UI Developer: Name
+
+Lead Backend Developer: Name
+
+Interactive Development: Name
+
+TalentBrew Implementation: Name
+
+## QA Team
+
+Name: Role
+
+## Account Team
+
+Name: Role
+
+## Special Thanks
+
+Name: Role
+
+Bobby KC: Who probably did something awesome.
+	
+## Site Stuff
+
+* Language: English
+* Doctype: HTML5
+* CSS: 2.1 and 3 (SASSified)
+* JavaScript: 1.8.5
+* Library: jQuery 1.9.1

@@ -1,0 +1,74 @@
+/* Footer */
+
+footer {
+margin-bottom: -1px;
+padding: .8em;
+background-color: rgb(129,128,133);
+@include background-image(linear-gradient(top,  rgba(129,128,133,1) 0%,rgba(130,139,148,1) 51%,rgba(127,137,146,1) 54%,rgba(117,127,136,1) 60%,rgba(42,54,61,1) 100%));
+color: #fff;
+text: {
+	align: center;
+	shadow: 1px 1px 0 #333;
+}
+font-size: px(12);
+
+	@include breakpoint(optimus) {
+
+		font-size: px(11);
+
+	}
+
+	h2 {
+	@extend %wai;
+	}
+
+	ul {
+	@extend %killlistdefault;
+	}
+
+	p, ul, li {
+	line-height: 1.8;
+
+		@include breakpoint(optimus) {
+
+			display: inline-block;
+			line-height: normal;
+
+		}
+
+	}
+
+	p {
+	margin: .5em 0;
+	}
+
+	li {
+	display: inline-block;
+	margin: .3em;
+	padding: 0 .6em;
+	text-transform: lowercase;
+	
+		&:last-child {
+		border: 0;
+		}
+
+		@include breakpoint(optimus) {
+
+			margin: 0;
+			border-right: 1px #fff solid;
+
+		}
+
+	}
+
+	a:link, a:visited, a:active {
+	text-decoration: underline;
+	color: #fff;
+
+		&:hover {
+		text-decoration: none;
+		}
+
+	}
+
+}

@@ -1,0 +1,55 @@
+/*! TMP Worldwide (jobsattmp.com) - Global CSS, Developer: Michael "Spell" Spellacy, @spellacy */
+
+// ### Framework: Related project tools and frameworks. ###
+
+	// Compass (Mandatory): An open-source CSS Authoring Framework that makes writing CSS much easier!
+
+	@import "compass/css3";
+
+	// Normalize (Manadatory): A CSS reset which levels out many cross-browser inconsistiences.
+
+	@import "partials/normalize";
+
+// ### Project: Related project variables, functionality, mixins and localizations ###
+
+	// Variables (Mandatory): Global variables used within this project.
+
+	@import "partials/variables";
+
+	// Functions (Mandatory): Global functions used within this project.
+
+	@import "partials/functions";
+
+	// Mixins (Mandatory): Global mixins used within this project.
+
+	@import "partials/mixins"; 
+
+	// Web Fonts (Mandatory): Web fonts used by the project.
+
+	@import "partials/fonts";
+
+	// Localize (Mandatory): Localize covers common best practices and baseline behavior.
+
+	@import "partials/localize";
+
+	// Theme (Mandatory): Main layout of site. This file contains imports to other partials that help make the layout.
+
+	@import "partials/theme";
+
+	// Placeholder (Optional): Placeholder patterns used withn this project (may need to move to layout)
+
+	@import "partials/placeholders";
+
+	// Shame (Optional): Cross-browser CSS hacks may be added here. For shame! For shame!
+
+	@import "partials/shame";
+
+// ### Boilerplate: Related layout and prototype specific properties. ###
+
+	// Page Message (Optional): May be used during development while performaing live updates.
+
+	@import "partials/message";
+
+	// TMP Disclaimer (Mandatory): Must be shown if a client is viewing template that is currently under development.
+
+	@import "partials/disclaimer";

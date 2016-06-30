@@ -1,0 +1,25 @@
+/* TMP Disclaimer */
+
+// Usage: To be placed on all prototypes being shown to our clients
+
+#tmp-disclaimer {
+padding: 1em 1em 0;
+border: 1px #ccc solid;
+background-color: rgb(254,255,255);
+@include background-image(linear-gradient(top,  rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%));
+color: #666;
+line-height: 1.6;
+font-size: px(14);
+
+	@include breakpoint(optimus) {
+
+		margin: 1em;
+		border-radius: 5px;
+
+	}
+
+	p {
+	margin: 0 0 1em;
+	}
+
+}

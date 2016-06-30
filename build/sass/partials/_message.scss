@@ -1,0 +1,22 @@
+
+/* Live Development Page Message */ 
+
+html {
+
+	@include breakpoint(optimus) {
+
+		&:before {
+		display: block;
+		width: 92%;
+		padding: .8em 4%;
+		background-color: rgb(246,230,180);
+		@include filter-gradient(#f6e6b4, #ed9017, vertical);
+		@include background-image(linear-gradient(top, rgba(246,230,180,1) 0%,rgba(237,144,23,1) 100%));
+		content: "This site is currently under live development. Objects in mirror may be closer than they appear.";
+		text-align: center;
+		color: #000;
+		}
+
+	}
+
+}

@@ -1,0 +1,105 @@
+/* Header */
+
+header[role="banner"] {
+position: relative;
+max-width: 970px;
+margin: 0 auto;
+padding: 1em .5em 0;
+
+	@include breakpoint(optimus) {
+
+		padding: 0 0 6em;
+
+	}
+
+	h1 {
+	display: inline-block;
+	max-width: 60%;
+	margin: 0 0 1em;
+	}
+
+	#skip-nav {
+	display: block;
+	right: 10px;
+	background-image: image-url("nav-menu-drk.png");
+	}
+
+	#btn-search {
+	display: none;
+	right: 60px;
+	background-image: image-url("nav-search.png");
+
+		.js & {
+		display: block;
+		}
+
+	}
+
+	#btn-search, #skip-nav {
+	position: absolute;
+	top: 8px;
+	width: 45px;
+	height: 45px;
+	border-radius: 5px;
+	text-indent: $text-offscreen;
+
+		background: {
+
+			position: center center;
+			repeat: no-repeat;
+
+		}
+
+		@include breakpoint(optimus) {
+
+			left: $text-offscreen;
+			width: 25%;
+			height: auto;
+			background-image: none;
+			text-indent: 0;
+			color: #036;
+			font-size: px(12);	
+
+			&:active, &:focus {
+
+				top: 70px;
+				left: 5%;
+				outline: 0;
+
+			}
+
+		}
+
+	}
+
+	// TMP Search (iframe). See search.scss for form specific styles.
+
+	#tmp-search {
+	margin: 0 auto 1em;
+	width: 301px;
+	height: 30px;
+	border: 0;
+
+		@include breakpoint(optimus) {
+		
+			position: absolute;
+			width: 302px;
+			top: 5px;
+			right: 0;
+		
+		}
+
+		.js & {
+		display: none;
+
+			@include breakpoint(optimus) {
+			
+				display: block !important;
+			
+			}
+
+		}
+
+	}
+
+}

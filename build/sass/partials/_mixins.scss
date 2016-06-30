@@ -1,0 +1,148 @@
+// Global Mixins 
+
+// Fonts
+
+@mixin declare-font-face($font-family, $font-filename, $font-weight : normal, $font-style :normal, $font-stretch : normal) {
+
+	@font-face {
+	font-family: "#{$font-family}";
+	src: font-url("#{$font-filename}.eot");
+	src: font-url("#{$font-filename}.eot?#iefix") format("embedded-opentype"),
+	font-url("#{$font-filename}.woff") format("woff"),
+	font-url("#{$font-filename}.ttf") format("truetype"),
+	font-url("#{$font-filename}.svg##{$font-family}") format("svg");
+	font-weight: $font-weight;
+	font-style: $font-style;
+	font-stretch: $font-stretch;
+	}
+
+}
+
+// Breakpoints
+
+@mixin breakpoint($point) {
+
+	@if $point == unicron {
+
+		@media (min-width: pem(1024)) {
+
+			@content; 
+
+		}
+
+	}
+
+	@if $point == vectorsigma {
+
+		@media (min-width: pem(940)) {
+
+			@content; 
+
+		}
+
+	}
+
+	@if $point == ultramagnus {
+
+		@media (min-width: pem(840)) {
+
+			@content; 
+
+		}
+
+	}
+
+	@else if $point == optimus {
+
+		@media (min-width: pem(768)) {
+
+			@content;
+
+		}
+
+	}
+
+	@else if $point == sumitpo {
+
+		@media (max-width: pem(768)) {
+
+			@content;
+
+		}
+
+	}
+
+	@else if $point == megatron {
+
+ 		@media (min-width: pem(580)) { 
+
+ 			@content; 
+
+ 		}
+
+	}
+
+	@else if $point == soundwave {
+
+ 		@media (min-width: pem(520)) { 
+
+ 			@content; 
+
+ 		}
+
+	}
+
+	@else if $point == cliffjumper {
+
+ 		@media (min-width: pem(480)) { 
+
+ 			@content; 
+
+ 		}
+
+	}
+
+	@else if $point == frenzy {
+
+ 		@media (min-width: pem(320)) { 
+
+ 			@content; 
+
+ 		}
+
+	}
+
+}
+
+@mixin clearfix {
+
+	&:after {
+	clear: both; 
+	content: "."; 
+	display: block; 
+	height: 0; 
+	visibility: hidden;
+	}
+
+}
+
+// Used to accessibly hide elements (display: none may cause issues with screen readers)
+
+@mixin wai {
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	text-indent: $text-offscreen;
+
+}
+
+@mixin killlistdefault {
+
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+}

@@ -1,0 +1,11 @@
+/* Web fonts */
+
+@include declare-font-face("Din Regular", "din-ot-regular");
+
+@include declare-font-face("Din Medium", "din-ot-medium");
+
+@include declare-font-face("Din Bold", "din-ot-bold");
+
+@include declare-font-face("Din Light", "din-next-light"); 
+
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);

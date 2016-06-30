@@ -1,0 +1,80 @@
+/* Local Project Rules and Best Practices */ 
+
+* {
+@include box-sizing(border-box);
+}
+
+html, body {
+min-height: 100%;
+}
+
+body {
+font: 500 100%/1.5 $base-font;
+}
+
+a {
+
+	/* &.external {
+	padding-right: 14px;
+	background: url(data:image/gif;base64,R0lGODlhCgAKAJECAP///5mZmQAAAAAAACH5BAEAAAIALAAAAAAKAAoAAAIalIMZJgH/1gGJqugQpFzH7TlWJVJMGZ0KwhQAOw==)center right no-repeat;
+
+		&:hover, &:focus {
+		background: url(data:image/gif;base64,R0lGODlhCgAKAJECAP///2eIpAAAAAAAACH5BAEAAAIALAAAAAAKAAoAAAIalIMZJgH/1gGJqugQpFzH7TlWJVJMGZ0KwhQAOw==)center right no-repeat;
+		}
+
+	} */
+
+}
+
+/* Common Media Properties */
+
+img, video, object {
+display: block;
+max-width: 100%;
+border: 0;
+}
+
+video {
+width: 100%;
+height: auto;
+border-radius: 5px;
+}
+
+code {
+color: olive;
+}
+
+sup {
+font-size: px(5);
+}
+
+/* Common Form Properties */
+
+input, button, select {
+-webkit-appearance: none;
+}
+
+label {
+cursor: pointer;
+}
+
+/* Page messages */
+
+.alert {
+font-style: italic;
+text-decoration: none;
+color: #c00;
+}
+
+/* Back to top: Default state */
+
+.back-to-top {
+display: block;
+
+	@include breakpoint(optimus) {
+
+		display: none;
+
+	}
+
+}

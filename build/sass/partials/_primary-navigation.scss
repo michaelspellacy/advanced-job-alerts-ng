@@ -1,0 +1,196 @@
+/* Primary Navigation */
+
+#primary-navigation {
+
+	@include breakpoint(optimus) {
+
+		position: absolute;
+		top: 85px;
+		right: 1em;
+		height: 60px;
+
+	}
+	
+	h2 {
+	margin: 0;
+	padding: 0 1em 1em;
+	background: #fff;
+	color: #000;
+	font-size: px(13);
+
+		@include breakpoint(optimus) {
+
+			display: none;
+
+		}
+
+	}
+
+	ul {
+	@extend %killlistdefault;
+	}
+
+	// Primary navigation
+
+	> ul {
+	background-color: rgba(15,144,197, .9);
+	text-transform: uppercase;
+	font: px(14) "Din Bold";
+
+		@include breakpoint(optimus) {
+
+			background: none;
+			font-size: px(11);
+		
+		}
+
+		> li {
+		border-bottom: 1px #fff solid;
+
+			@include breakpoint(optimus) {
+
+				display: inline-block;
+				padding: 0 .9em;
+				border-bottom: 0;
+				background: inline-image("nav-divider.gif") 100% 50% no-repeat;
+
+				&:last-child {
+				background: none;
+				}
+
+			}
+
+			> a {
+			display: block;
+			position: relative;
+			padding: 1em;
+			color: #fff;
+
+				&.parent {
+
+					&:after {
+					position: absolute;
+					top: .5em;
+					right: 1em;
+					content: "+";
+					font: px(20) "Din Bold";
+					}
+
+					&.active {
+
+						&:after {
+						content: "-";	
+						}
+
+					}
+
+				}
+
+				@include breakpoint(optimus) {
+
+					padding: 0;
+					border-top: 1px transparent solid;
+					border-bottom: 1px transparent solid;
+					line-height: 1.6;
+					color: #888;
+
+					&.parent:after, &.parent.active:after {
+					content: "";
+					}
+
+				}
+
+				&:hover, &:focus, &.active {
+				text-decoration: none;
+				text-shadow: 1px 1px 0 #666;
+				color: #f93;
+
+					@include breakpoint(optimus) {
+
+						color: #7e9ab2;
+						text-shadow: none;
+
+					}
+
+				}
+
+				&.active {
+
+					@include breakpoint(optimus) {
+
+						border-color: #7e9ab2;
+
+					}
+
+				}
+
+			}
+
+		}
+
+		// Sub navigation
+
+		.child {
+		margin: 0 2em 1em;
+
+			@include breakpoint(optimus) {
+
+				position: absolute;
+				top: 40px;
+				left: 50%;
+				width: 600px;
+				margin: 0 0 0 -300px;
+				text-align: center;
+				font-size: px(10);
+
+			}
+
+			.js & {
+			display: none;
+			}
+
+			li {
+
+				@include breakpoint(optimus) {
+
+					display: inline-block;
+					background: inline-image("nav-middot.png") left 2px no-repeat;
+
+						&:first-child {
+						background: none;
+						}
+
+				}
+
+			}
+
+			a {
+			display: block;
+			line-height: 2;
+			color: #fff;
+
+				@include breakpoint(optimus) {
+
+					padding: 0 1.3em 1.3em 1.8em;
+					color: #888;
+					line-height: inherit;
+					text-decoration: none;
+
+						&.selected {
+						background: image-url("sub-nav-arrow.png") bottom center no-repeat;
+						}
+
+				}
+
+				
+			}
+
+		}
+
+		#nav-careers .child {
+		display: block;
+		}
+
+	}
+
+}
